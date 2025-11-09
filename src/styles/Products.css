@@ -1,0 +1,195 @@
+.products-wrapper {
+  background: linear-gradient(135deg, #f8faff 0%, #eef2f8 100%);
+  min-height: 100vh;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🔝 Qidiruv va kategoriyalar */
+.header-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.search-icon {
+  color: #777;
+  margin-right: 8px;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-btn {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.category-btn.active {
+  background: #007aff;
+  color: white;
+  box-shadow: 0 6px 14px rgba(0, 122, 255, 0.3);
+}
+
+.category-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* 🧩 Product grid */
+.section-title {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.product-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.price {
+  font-size: 1rem;
+  color: #007aff;
+  font-weight: 600;
+}
+
+.buy-btn {
+  width: 85%;
+  margin: 10px auto 15px;
+  padding: 10px 20px;
+  background: #007aff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.buy-btn:hover {
+  background: #005fcc;
+}
+
+.no-results {
+  color: #666;
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+
+/* Wishlist tugma (product card ichida) */
+.product-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* wishlist heart button */
+.wishlist-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease;
+  color: #666;
+  box-shadow: none;
+}
+.wishlist-btn:hover {
+  transform: scale(1.06);
+}
+
+/* active holat — filled look */
+.wishlist-btn.active {
+  background: rgba(255, 64, 129, 0.12);
+  color: #ff4081;
+}
+
+/* wishlist toast */
+.wishlist-toast {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  background: linear-gradient(90deg, #ff6ea1, #ff8fb1);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 8px 30px rgba(255, 80, 150, 0.18);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
